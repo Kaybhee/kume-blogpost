@@ -1,0 +1,39 @@
+
+.form{
+    padding-right: 300px;
+    color: black;
+    /* width: 40%; */
+    border-radius: 12px;
+
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    display: flex;
+    min-height: 100vh;
+}
+
+
+
+.form input{
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: solid;
+    /* border: 3px solid rgba(255, 255, 255, 0.2) ; */
+}
+
+
+.submit {
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    border: none;
+}
+.submit:hover {
+    background-color: green;
+}
+
