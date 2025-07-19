@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just a form</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+    <div class="form">
+        <!-- <center> -->
+            <form  style="border: 1px solid aqua; justify-content: space-around; padding: 10px; border-radius: 5px;">
+                <div class="a-name" style="padding-bottom: 10px;">
+                    <label for="name">Name:</label>
+                    <input type="name" placeholder="your name" required id="name">
+                </div>
+                <div class="a-Email" style="padding-bottom: 10px;">
+                    <label for="email"> Email:</label>
+                    <input type="email" placeholder="Enter your email" required id="email">
+                </div>
+                <div class="a-number" style="padding-bottom: 10px;">
+                    <label for="number">Password:</label>
+                    <input type="text" placeholder="Password" required id="pass">
+                </div>
+                <div class="x-area">
+                    <label for="text" > Message:</label>
+                    <textarea placeholder="feedback" style="width: 90%;height: 90%;"></textarea>
+                </div>
+                <div style="display: flex; ">
+                    <button type="submit" class="submit" style="padding-left: 2px;cursor: pointer;">Sign-up</button>
+                    <button type="reset" class="reset" style="padding-left: 2px; margin-left: 40px; background-color: transparent;border: none; text-decoration: underline; color: red; cursor: pointer;">sign-in/forgot pass</button>                    
+                </div>
+            </form>
+           
+           </div>
+    </div>
+    <div class="a-post" style="border: 2px solid rgba(155, 155, 155); padding: 10px; border-radius: 5px; width: 500px;">
+        <div class="blog">
+            <div class="title">
+                <h5 class="b-title" style="text-align: center;">Blog Post Title</h5>
+                <input type="text" style="width: 100%; height: 30px;border-radius: 5px;">
+            </div>
+            <article>
+                <div class="content">
+                    <h5 class="post" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center;">Post about something</h5>
+                    <textarea name="" id="blogpost" placeholder="Write a blog" required style="height:400px; width: 500px;padding-left: 5px; border-radius: 5px;"></textarea>
+                </div>
+            </article>
+            <div>
+            <button  class="submit" style=" justify-items: center; border: none; width: 60px; height: 30px; border-radius: 2px;" >POST</button>
+            </div>
+    </div>
+</body>
+<script src="index.html"></script>
+</html>
