@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 
-app.use('/api/v1/', userDetails);
+app.use('/api', userDetails);
 
 app.listen(PORT ||MONGODB_URL, () => {
     console.log(`Server running at http://localhost:${PORT}`)
