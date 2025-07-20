@@ -8,18 +8,19 @@ import userDetails from './routes/signupDetails.js';
 const app = express();
 dotenv.config();
 
+
+app.use(express.json());
 app.use(cors('*'));
 app.use(morgan('dev'))
-app.use(express.json());
 
-const PORT = process.env.PORT || 5000;
-// const MONGODB_URL = process.env.MONGODB_URL;
+
+const PORT = 5000;
 connectDB();
 
 
 app.use('/api', userDetails);
 
-app.listen(PORT ||MONGODB_URL, () => {
+app.listen(PORT || MONGODB_URL, () => {
     console.log(`Server running at http://localhost:${PORT}`)
 })
 
