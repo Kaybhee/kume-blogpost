@@ -1,9 +1,12 @@
+const API_LINK = 'https://localhost:5000/signup'
 
 
-const name = document.getElementById('name');
-const email = document.getElementById('email');
-const number = document.getElementById('number');
+document.getElementById('signup-form').addEventListener('sumit', async ( event )=> {
+    event.preventDefault();
+    
+}
+)
 
-
+const 
 
 console.log(name)
