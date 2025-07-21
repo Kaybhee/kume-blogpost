@@ -16,9 +16,9 @@ export const userSignUp =  async(req, res) => {
             return res.status(400).json({message: "User already exists", data: null});
         }
         const code = Math.floor(100000 + Math.random() * 900000);
-        cache.set(email, code.toString(), 120);
+        cache.set(email, code.toString(), 3600000);
         const emailData = await sendEmails(email, {
-            subject: "Kume blog post otp",
+            subject: "Kume Blog",
             message: `Your otp code is ${code}`
         })
         if (!emailData) {
@@ -39,6 +39,30 @@ export const userSignUp =  async(req, res) => {
 }
 
 
-export const resendUserOtp = async(req, res) => {
+export const resendOtp = async(req, res) => {
+    const {email} = req.body;
+    try {
+        const user = await appForm.findOne({email});
+        if (!user) {
+            return res.status(404).json({message: "User not found", data: null});
+        }
+        const code = Math.floor( 100000 + Math.random() * 900000);
+        cache.set(email, code.toString(), 3600000);
+        const emailData = await sendEmails(email, {
+            subject: "Kume Blog",
+            message: `Your otp code is ${code}`
+        })
+        if (!emailData) {
+            return res.status(500).json({message: "Failed to send email", data: null});
+        }
+        return res.status(200).json({message: "Otp resent successfully", data: code});
+    } catch (err) {
+        console.error(err);
+        return res.status(500).json({message: 'Internal Server error'})
+    }
+}
+
+
+export const userLogin = async(req, res) => {
     
 }
