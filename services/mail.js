@@ -12,7 +12,7 @@ export const sendEmails = async (to, data) => {
         pass: process.env.EMAIL_PASSWORD,
     }
 })
-const sendHtml = `!<DOCTYPE html>
+const sendHtml = `<DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
