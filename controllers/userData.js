@@ -64,5 +64,11 @@ export const resendOtp = async(req, res) => {
 
 
 export const userLogin = async(req, res) => {
-    
+    const { email, password } = req.body;
+    try {
+
+    }
+    catch (err) {
+        
+    }
 }
