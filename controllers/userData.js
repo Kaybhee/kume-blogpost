@@ -63,6 +63,14 @@ export const resendOtp = async(req, res) => {
 }
 
 
+export const verifyUserOtp = async(req, res) => {
+    try {
+        
+    } catch (err) {
+
+    }
+}
+
 export const userLogin = async(req, res) => {
     const { email, password } = req.body;
     try {
