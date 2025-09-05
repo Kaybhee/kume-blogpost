@@ -14,13 +14,17 @@ document.getElementById('sign-up-sign-in').addEventListener('submit', async ( ev
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({name, email, password})
         });
-        console.log(response)
         const data = await response.json();
+        console.log(data)
+
         if (response.ok) {
             document.getElementById('signup-message').innerText = 'Signup successful!';
+            document.getElementById('signup-message').style.color = "green";
         }
         else {
-            document.getElementById('signup-message').innerText = 'Signup failed!' || data.message;
+            document.getElementById('signup-message').innerText = data.message;
+            document.getElementById('signup-message').style.color = "red";
+
         }
     }
     catch (err) {
