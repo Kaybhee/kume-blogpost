@@ -1,4 +1,4 @@
-const API_LINK = 'http://localhost:5000/api/sign-up'
+const API_LINK = 'http:localhost:5000/api/'
 
 
 document.getElementById('sign-up-sign-in').addEventListener('submit', async ( event )=> {
@@ -9,7 +9,7 @@ document.getElementById('sign-up-sign-in').addEventListener('submit', async ( ev
     // console.log(name);
     // console.log(password);
     try {
-        const response = await fetch(API_LINK, {
+        const response = await fetch(API_LINK + 'sign-up', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({name, email, password})
