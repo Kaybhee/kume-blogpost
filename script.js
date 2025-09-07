@@ -9,7 +9,7 @@ document.getElementById('sign-up-sign-in').addEventListener('submit', async ( ev
     // console.log(name);
     // console.log(password);
     try {
-        const response = await fetch(API_LINK + 'sign-up', {
+        const response = await fetch(API_LINK + '/sign-up', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({name, email, password})
