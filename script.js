@@ -1,4 +1,4 @@
-const API_LINK = 'http:localhost:5000/api/'
+const API_LINK = 'https://kume-blogpost.onrender.com/api/'
 
 
 document.getElementById('sign-up-sign-in').addEventListener('submit', async ( event )=> {
