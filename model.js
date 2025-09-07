@@ -6,6 +6,14 @@ const form = mongoose.Schema({
         type: String,
         required: true
     },
+    isVerified: {
+        type: Boolean,
+        default: false
+    },
+    isDelete: {
+        type: Boolean,
+        default: false
+    },
     email: {type: String, required: true},
     password: { type: String, required: true},
     feedback: {type: String, }
