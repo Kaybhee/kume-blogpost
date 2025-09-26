@@ -2,6 +2,7 @@ import appForm from '../model.js';
 import NodeCache from 'node-cache';
 import { hashPass, verifyPass } from '../services/password.js';
 import { sendEmails } from '../services/mail.js';
+import { signUser } from '../services/token.js';
 
 const cache = new NodeCache();
 
@@ -125,10 +126,11 @@ export const userLogin = async(req, res) => {
             if (!isPassValid) {
                 return res.status(401).json({ message: "Invalid credentials", data: null });
             }
+            const token = await signUser(loggingUser);
             return res.status(200).json({
                 status: true,
                 message: "Login Successful",
-                data: loggingUser
+                data: { loggingUser, token }
             })
         }
         
