@@ -11,7 +11,7 @@ const cache = new NodeCache();
 export const userSignUp =  async(req, res) => {
     try {
         const { name, password, email } = req.body;
-        const existingUser = await appForm.findOne({email, name});
+        const existingUser = await appForm.findOne({email});
         if (existingUser) {
             return res.status(400).json({message: "User already exists", data: null});
         }
